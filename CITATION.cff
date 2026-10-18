@@ -3,7 +3,7 @@ message: "If you use this software in your work, please cite it using the metada
 title: "Azure Stroke Pipeline: a QA-gated generative workflow for apparel lookbook production"
 type: software
 authors:
-  - family-names: "Azure Stroke Pipeline Contributors"
+  - family-names: "四方"
 year: 2026
 license: MIT
 url: "https://github.com/c1849611456-eng/jiance"
