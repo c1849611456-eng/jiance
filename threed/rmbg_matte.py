@@ -8,7 +8,7 @@ import numpy as np
 import onnxruntime as ort
 from PIL import Image
 
-MODEL = r"paths.COMFY + "/models"\rmbg\model.onnx"
+MODEL = os.path.join(paths.COMFY, "models", "rmbg", "model.onnx")
 SRC = r"paths.BR\gen\b1_new\B1_new_front.png"
 DST = r"paths.BR\gen\b1_new\B1_front_matted.png"
 os.makedirs(os.path.dirname(MODEL), exist_ok=True)
