@@ -1,0 +1,30 @@
+brand: "OCEAN PULSE"
+series: "OPEN WATER"
+version: "v1.0"
+standards_base:
+  - {item: "Colour fastness", value: "≥ 4", basis: "ISO 105-C06"}
+  - {item: "Stretch", value: "≥ 180%", basis: "ISO 13934"}
+styles:
+  - code: A1
+    name_cn: 样例连体
+    name_en: SAMPLE ONE-PIECE
+    series: "SEA A"
+    scene: "Training"
+    seed: 100001
+    colors:
+      - {name: Main, hex: "#1B3B8F", role: 主体, pct: 70}
+      - {name: Trim, hex: "#E8E4DC", role: 包边, pct: 30}
+    key_dims:
+      - [Front zip, "40 cm"]
+    materials:
+      - [Shell, "Recycled nylon 72/28", "210 g/m²"]
+    claims:
+      - [UV protection, "UPF > 50", "GB/T 18830"]
+    details:
+      - {label: Collar & zip, view: front, box: [0.38, 0.17, 0.62, 0.36]}
+    render_manifest:
+      front: A1_front.png
+      side: A1_side.png
+      back: A1_back.png
+      three_quarter: A1_three_quarter.png
+      bottom: A1_bottom.png

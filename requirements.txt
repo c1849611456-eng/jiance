@@ -1,0 +1,6 @@
+numpy
+opencv-python
+Pillow
+PyYAML
+pypdf
+onnxruntime
