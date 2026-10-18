@@ -1,3 +1,6 @@
+import os, sys
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import paths
 # -*- coding: utf-8 -*-
 """RMBG-1.4 (ONNX, 经 hf-mirror 下载) 抠图 -> 合成纯色影棚背景。"""
 import os, time
@@ -5,9 +8,9 @@ import numpy as np
 import onnxruntime as ort
 from PIL import Image
 
-MODEL = r"D:\ComfyUI\models\rmbg\model.onnx"
-SRC = r"D:\创新大赛\dafuer\_bridge\gen\b1_new\B1_new_front.png"
-DST = r"D:\创新大赛\dafuer\_bridge\gen\b1_new\B1_front_matted.png"
+MODEL = r"paths.COMFY + "/models"\rmbg\model.onnx"
+SRC = r"paths.BR\gen\b1_new\B1_new_front.png"
+DST = r"paths.BR\gen\b1_new\B1_front_matted.png"
 os.makedirs(os.path.dirname(MODEL), exist_ok=True)
 
 if not os.path.exists(MODEL):

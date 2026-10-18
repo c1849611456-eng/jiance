@@ -1,3 +1,6 @@
+import os, sys
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import paths
 # -*- coding: utf-8 -*-
 """专业抠图（rembg）：B1 正视去背 -> 合成纯色影棚背景。"""
 import os
@@ -5,8 +8,8 @@ import numpy as np
 from PIL import Image
 from rembg import remove, new_session
 
-SRC = r"D:\创新大赛\dafuer\_bridge\gen\b1_new\B1_new_front.png"
-DST = r"D:\创新大赛\dafuer\_bridge\gen\b1_new\B1_front_matted.png"
+SRC = r"paths.BR\gen\b1_new\B1_new_front.png"
+DST = r"paths.BR\gen\b1_new\B1_front_matted.png"
 model = os.environ.get("RMBG_MODEL", "u2net")
 print("model:", model, flush=True)
 session = new_session(model)

@@ -1,11 +1,14 @@
+import os, sys
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import paths
 # -*- coding: utf-8 -*-
 """用 OpenCV 抠出 B1 正视人物（最大连通域 + 填洞 + 羽化），合成到纯色影棚背景。"""
 import os
 import numpy as np
 import cv2
 from PIL import Image
-SRC = r"D:\创新大赛\dafuer\_bridge\gen\b1_new\B1_new_front.png"
-DST = r"D:\创新大赛\dafuer\_bridge\gen\b1_new\B1_front_clean.png"
+SRC = r"paths.BR\gen\b1_new\B1_new_front.png"
+DST = r"paths.BR\gen\b1_new\B1_front_clean.png"
 bgr = cv2.imdecode(np.fromfile(SRC, dtype=np.uint8), cv2.IMREAD_COLOR)   # 中文路径需用 imdecode
 H, W = bgr.shape[:2]
 print("size", W, H)
