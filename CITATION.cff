@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this software in your work, please cite it using the metadata below."
+title: "Azure Stroke Pipeline: a QA-gated generative workflow for apparel lookbook production"
+type: software
+authors:
+  - family-names: "Azure Stroke Pipeline Contributors"
+year: 2026
+license: MIT
+url: "https://github.com/c1849611456-eng/jiance"
+keywords:
+  - generative design
+  - apparel lookbook
+  - image quality assurance
+  - stable diffusion
+  - flux kontext
+  - comfyui

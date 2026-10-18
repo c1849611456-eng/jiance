@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile-check all pipeline scripts
+        run: |
+          python -m py_compile paths.py $(find gen build qa threed -name "*.py")
+          echo "all scripts compile"
+
+  no-weights:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Guard against binary assets in the repo
+        run: |
+          if git ls-files | grep -Ei '\.(safetensors|pth|onnx|ckpt|gguf|blend|pdf|png|jpe?g|ttf|otf)$'; then
+            echo "ERROR: binary model/output assets found in the repository"; exit 1
+          fi
+          echo "no model weights or output assets tracked"
